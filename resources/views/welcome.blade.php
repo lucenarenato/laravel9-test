@@ -61,6 +61,18 @@
             .m-b-md {
                 margin-bottom: 30px;
             }
+            #fundo{
+                /* width: 1920px;
+                height: 1080px; */
+                background-image: url(img/logo.png);
+            }
+            .logo-image{
+                width: 46px;
+                height: 46px;
+                border-radius: 50%;
+                overflow: hidden;
+                margin-top: -6px;
+            }
         </style>
     </head>
     <body>
@@ -80,21 +92,24 @@
             @endif
 
             <div class="content">
-                <div class="title m-b-md">
-                    Laravel
+                {{-- <div class="relative flex items-top justify-center min-h-screen bg-gray-100 dark:bg-gray-900 sm:items-center sm:pt-0" id="fundo">
+                    <h2 style="color: rgb(0, 84, 252);">Aprendendo a ler certificado pfx</h2>
+                </div> --}}
+                <div class="title m-b-md" id="fundo">
+                    Vercan
                 </div>
                 <div class="ml-4 text-center text-sm text-gray-500 sm:text-right sm:ml-0">
                     Laravel v{{ Illuminate\Foundation\Application::VERSION }} (PHP v{{ PHP_VERSION }})
                 </div>
-                <div class="links">
-                    <a href="https://laravel.com/docs">Docs</a>
-                    <a href="https://laracasts.com">Laracasts</a>
+                <div class="links" id="fundo">
+                    {{-- <a href="https://laravel.com/docs">Docs</a> --}}
+                    {{-- <a href="https://laracasts.com">Laracasts</a>
                     <a href="https://laravel-news.com">News</a>
                     <a href="https://blog.laravel.com">Blog</a>
                     <a href="https://nova.laravel.com">Nova</a>
                     <a href="https://forge.laravel.com">Forge</a>
                     <a href="https://vapor.laravel.com">Vapor</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
+                    <a href="https://github.com/laravel/laravel">GitHub</a> --}}
                 </div>
             </div>
         </div>

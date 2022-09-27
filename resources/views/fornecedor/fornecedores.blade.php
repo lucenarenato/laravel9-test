@@ -10,7 +10,7 @@
             <p>Painel de Controle</p>
         </div>
         <div>
-            <a href="{{ route('cadastroFonecedores') }}" type="button" class="btn btn-primary" >Cadastrar</a>
+            <a href="{{ route('cadastroFornecedores') }}" type="button" class="btn btn-primary" >Cadastrar</a>
         </div>
     </div>
 @stop
@@ -47,10 +47,10 @@
                                 <td>{{ ($fornecedor->ativo_juridico)? $fornecedor->ativo_juridico : $fornecedor->ativo_fisico  }}</td>
                                 <td class="acoes">
                                     <div class="editar">
-                                        <a href="{{ url('/fonecedores/' . $fornecedor->id) }}" class="btn" id="editar">Editar</a>
+                                        <a href="{{ url('/fornecedores/' . $fornecedor->id) }}" class="btn" id="editar">Editar</a>
                                     </div>
                                     <div class="deletar">
-                                        <form method="POST" action="{{ url('/fonecedores' . '/' . $fornecedor->id) }}" accept-charset="UTF-8" style="display:inline">
+                                        <form method="POST" action="{{ url('/fornecedores' . '/' . $fornecedor->id) }}" accept-charset="UTF-8" style="display:inline">
                                             {{ method_field('DELETE') }}
                                             {{ csrf_field() }}
                                             <button type="submit" class="btn btn-danger btn-sm" id="deletar" title="Delete Student" ><i class="fa fa-trash-o" aria-hidden="true"></i> Delete</button>

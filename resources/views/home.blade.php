@@ -3,43 +3,34 @@
 @section('title', 'Dashboard')
 
 @section('content_header')
-    <h1>Dashboard</h1>
+    <h1>
+        Dashboard
+        <small>Painel de Controle</small>
+    </h1>
 @stop
 
 @section('content')
-    <p>Welcome to this beautiful admin panel.</p>
+    {{-- <p>Olá Candidato, bem-vindo ao painel do Desafio Vercan.</p> --}}
+    <div class="row">
+        <section class="invoice">
+            <div class="row">
+                <div class="col-xs-12">
+                    <h2 class="page-header">
+                        Olá Visitante, bem-vindo!
+                        <small class="" styles="margin-right: 50%;text-align: right;">Hoje é {{ date('d/m/Y') }}</small>
+                    </h2>
+                </div>
+            </div>
+            
+        </section>
+    </div>
 @stop
 
 @section('css')
-    @vite([ 'resources/sass/app.scss',   'resources/css/app.css',   'resources/js/app.js'])
+    <link rel="stylesheet" href="{{ asset('css/main.css') }}">
+    {{-- @vite([ 'resources/sass/app.scss',   'resources/css/app.css',   'resources/js/app.js']) --}}
 @stop
 
 @section('js')
-    <script> console.log('Hi!'); </script>
+    <script> console.log('Olá!'); </script>
 @stop
-{{-- @extends('layouts.app')
-
-@section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">{{ __('Dashboard') }}</div>
-
-                <div class="card-body">
-                    @if (session('status'))
-                        <div class="alert alert-success" role="alert">
-                            {{ session('status') }}
-                        </div>
-                    @endif
-
-                    {{ __('You are logged in!') }}
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-@endsection
-@section('js')
-    <script> console.log('Hi!'); </script>
-@stop --}}

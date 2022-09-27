@@ -13,7 +13,7 @@
 
 @section('content')
     <div class="container-fluid">
-        <form action="{{ route('cadastrarFonecedores') }}" method="POST">
+        <form action="{{ route('cadastrarFornecedores') }}" method="POST">
             @csrf
             <div class="card card-default">
                 <div class="card-header">
@@ -313,18 +313,23 @@
 @stop
 
 @section('js')
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
 
     <script>
         $(document).ready(function() {
             // INICIAR EM HIDDEM
             $('.formulario_fisica').hide();
             $('#cpf').removeAttr('required');
+            //Variavel com valor do campo CPF
+                var cpf=$("#cpf").val();
+                var cpf2 = cpf.replace('.', '');
+                var cpf2 = cpf2.replace('.', '');
             $('#nome').removeAttr('required');
             $('#rg').removeAttr('required');
             $('#ativo_fisico').removeAttr('required');
             // MASCARAS
             // $("#form_CLICliente_CLICep").mask('00000-000');
-            // $("#telefone").inputmask('(00)00000-0000');
+            $("#telefone").mask('(00)00000-0000');
             // $("#cnpj").inputmask('00.000.000/0000-00');
             // $("#cpf").inputmask('000.000.000-00');
             // $('.btn-tool').click();
@@ -478,8 +483,16 @@
             // CNPJ
             $('#cnpj').blur(function(e) {
                 console.log($(this).val());
+                $('#cnpj').mask('00.000.000/0000-00', {reverse: true});
+                //Variavel com valor do campo cnpj
+                var cnpj=$("#cnpj").val();
+                var cnpj2 = cnpj.replace('.', '');
+                var cnpj2 = cnpj2.replace('.', '');
+                //*se tiver 1 ponto, dá um replace no ponto. se tiver 10... dá 10 replace.
+                var cnpj2 = cnpj2.replace('-', '');
+                var cnpj2 = cnpj2.replace('/', '');
                 $.ajax({
-                    url: 'https://receitaws.com.br/v1/cnpj/' + $(this).val(),
+                    url: 'https://receitaws.com.br/v1/cnpj/' + cnpj2,
                     method: 'GET',
                     dataType: 'jsonp',
                 }).done(function(results, sucess) {
@@ -542,6 +555,27 @@
                     $('#cidade').append(content);
                 }
             });
+            // CPF
+            $('#cpf').blur(function(e) {
+                console.log($(this).val());
+                $('#cpf').mask('000.000.000-00', {reverse: true});
+               //Variavel com valor do campo CPF
+                var cpf=$("#cpf").val();
+                var cpf2 = cpf.replace('.', '');
+                var cpf2 = cpf2.replace('.', '');
+                console.log(cpf2);
+            });
+            // Telefone
+            // $('#telefone').blur(function(e) {
+            //     console.log($(this).val());
+            //     $('#telefone').mask('(00)00000-0000', {reverse: true});
+            //    //Variavel com valor do campo CPF
+            //     var telefone=$("#telefone").val();
+            //     var telefone2 = telefone.replace('-', '');
+            //     var telefone2 = telefone2.replace('-', '');
+            //     console.log(telefone2);
+            // });
+            
         });
     </script>
 @stop

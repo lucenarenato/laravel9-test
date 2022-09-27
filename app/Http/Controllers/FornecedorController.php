@@ -33,7 +33,7 @@ class FornecedorController extends Controller
     public function store(Request $request)
     {
         try {
-            $fonecedores = [
+            $fornecedores = [
                 'cnpj'               => $request->cnpj,
                 'razao_social'       => $request->razao_social,
                 'nome_fantasia'      => $request->nome_fantasia,
@@ -60,7 +60,7 @@ class FornecedorController extends Controller
                 'observacao'         => $request->observacao,
             ];
 
-            $fornecedor = Fornecedore::create($fonecedores);
+            $fornecedor = Fornecedore::create($fornecedores);
 
             foreach($request->telefone as $key => $value){
                 $dados_pricipal = [
@@ -100,7 +100,7 @@ class FornecedorController extends Controller
             DB::rollBack();
         }
 
-        return redirect('fonecedores')->with('flash_message', $resposta['mensagem'] );
+        return redirect('fornecedores')->with('flash_message', $resposta['mensagem'] );
     }
 
     /**
@@ -115,6 +115,6 @@ class FornecedorController extends Controller
         ContatoPrincipal::where('fornecedores_id', '=', $id)->delete();
         Fornecedore::destroy($id);
 
-        return redirect('fonecedores')->with('flash_message', 'Student deleted!');
+        return redirect('fornecedores')->with('flash_message', 'Student deleted!');
     }
 }
