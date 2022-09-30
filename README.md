@@ -9,18 +9,15 @@
 
 ## About
 
-composer create-project laravel/laravel --prefer-dist laravel-bootstrap
-composer require laravel/ui
-php artisan ui bootstrap
+```
+composer install -o
+cp .env.example .env                   
 npm install
 npm run dev
-php artisan ui bootstrap --auth
-
-php artisan ui bootstrap --auth
-npm install bootstrap
-npm install sass
-npm install sass-loader
-npm install && npm run dev
+php artisan migrate --seed
+php artisan key:generate
+php artisan serve
+```
 
 # Informações
 ## A tabela states contém:
