@@ -7,7 +7,7 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
 </p>
 
-## About Laravel
+## About
 
 
 Porém, antes de seguirmos para uma entrevista, precisamos que você avalie um CRUD de Fornecedor e verifique se é possível reproduzir o mesmo.
@@ -35,25 +35,26 @@ No ambiente demonstrativo você irá ver um CRUD de Fornecedores, no qual há na
 
 Regras do Teste Prático:
 
-Frontend
+## Frontend
 HTML, CSS (Bootstrap, Materialize ou Tailwind) e Javascript (Vanilla, jQuery, Vue, Angular ou React);
 Utilize um tema Dashboard, temos por padrão o uso do AdminLTE, mas sinta-se à vontade para usar um de sua preferência.
-Backend
+## Backend
 PHP 8 e Laravel 9 (ou a última versão do momento);
 O projeto pode ser feito de forma tradicional (rota web + blade), API Restful, Inertia ou Livewire.
-Regras de Negócio
+## Regras de Negócio
 O acesso ao seu projeto deve ser permitido apenas ao usuário logado, mas não precisa de um crud de usuário, crie um seed para deixar o mesmo pré-cadastrado;
 Utilize os recursos comuns no Laravel, tais como: route, mix, migration, seed, auth, form request, entre outros que julgar necessário.
 Os estados e cidades devem ser cadastrados no banco de dados via seed;
 Utilize máscara para formatar os campos: CNPJ, CPF e telefone;
 Utilize validadores para os campos CNPJ e CPF, a fim de evitar conteúdo inválido, ex CPF: 00.000.000-00
-Diferencial no Projeto
+## Diferencial no Projeto
 Código Limpo;
 Utilizar Design Patterns;
 Testes automatizados;
 Banco de Dados bem estruturado;
 Entidades (Model) com um bom relacionamento.
-Demais Informações
+
+## Demais Informações
 Envie seu projeto via GitHub;
 Diariamente os dados do ambiente da Vercan serão apagados;
 Dúvidas em geral devem ser tratadas neste e-mail;
@@ -66,10 +67,9 @@ Em caso de dúvida, estou à disposição.
 
 Att,
 
-https://receitaws.com.br/api
-https://developers.receitaws.com.br/#/operations/queryCNPJFree
-
-https://viacep.com.br/
+- https://receitaws.com.br/api
+- https://developers.receitaws.com.br/#/operations/queryCNPJFree
+- https://viacep.com.br/
 
 
 composer create-project laravel/laravel --prefer-dist laravel-bootstrap
@@ -105,5 +105,5 @@ Renda per-capita
 
 Título e slug
 
-
+- https://github.com/geekcom/validator-docs
 - https://github.com/jeroennoten/Laravel-AdminLTE/wiki/Installation
