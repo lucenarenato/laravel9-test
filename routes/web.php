@@ -30,12 +30,13 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::get('/fornecedores', [App\Http\Controllers\FornecedorController::class, 'index'])->name('fornecedores');
 Route::get('/fornecedores/cadastro', [App\Http\Controllers\FornecedorController::class, 'create'])->name('cadastroFornecedores');
 Route::post('/fornecedores/store', [App\Http\Controllers\FornecedorController::class, 'store'])->name('cadastrarFornecedores');
+Route::get('fornecedores/{id}', [App\Http\Controllers\FornecedorController::class, 'view'])->name('viewFornecedores');
 Route::delete('fornecedores/{id}', [App\Http\Controllers\FornecedorController::class, 'destroy'])->name('destroyFornecedores');
 
 Route::resource('cidade', CitiesController::class);
 
-Route::get('/profile', 'ProfileController@index')->name('profile');
-Route::put('/profile', 'ProfileController@update')->name('profile.update');
+// Route::get('/profile', 'ProfileController@index')->name('profile');
+// Route::put('/profile', 'ProfileController@update')->name('profile.update');
 
 Route::get('logout', 'Auth\LoginController@logout')
                                         ->name('logout')

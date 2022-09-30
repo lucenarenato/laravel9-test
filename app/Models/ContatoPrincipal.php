@@ -19,4 +19,9 @@ class ContatoPrincipal extends Model
         'email',
         'tipo_email'
     ];
+
+    public function fornecedor()
+    {
+        return $this->belongsTo('App\Models\Fornecedor');
+    }
 }

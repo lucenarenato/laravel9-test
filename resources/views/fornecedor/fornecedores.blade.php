@@ -46,8 +46,8 @@
                                 <td>{{ ($fornecedor->cnpj)? $fornecedor->cnpj : $fornecedor->cpf  }}</td>
                                 <td>{{ ($fornecedor->ativo_juridico)? $fornecedor->ativo_juridico : $fornecedor->ativo_fisico  }}</td>
                                 <td class="acoes">
-                                    <div class="editar">
-                                        <a href="{{ url('/fornecedores/' . $fornecedor->id) }}" class="btn" id="editar">Editar</a>
+                                    <div class="ver">
+                                        <a href="{{ url('/fornecedores/' . $fornecedor->id) }}" class="btn btn-default" id="ver">Ver</a>
                                     </div>
                                     <div class="deletar">
                                         <form method="POST" action="{{ url('/fornecedores' . '/' . $fornecedor->id) }}" accept-charset="UTF-8" style="display:inline">

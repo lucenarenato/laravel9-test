@@ -4,8 +4,10 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Fornecedore extends Model
+class Fornecedor extends Model
 {
+
+    protected $table = 'fornecedores';
 
     protected $fillable = [
         'cnpj',
@@ -33,4 +35,9 @@ class Fornecedore extends Model
         'condominio',
         'observacao',
     ];
+
+    public function contatoPrincipal()
+    {
+        return $this->hasMany('App\Models\ContatoPrincipal');
+    }
 }
