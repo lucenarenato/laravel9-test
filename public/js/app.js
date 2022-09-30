@@ -1221,8 +1221,8 @@ module.exports = (
  */
 module.exports = function isAbsoluteURL(url) {
   // A URL is considered absolute if it begins with "<scheme>://" or "//" (protocol-relative URL).
-  // RFC 3986 defines scheme name as a sequence of characters beginning with a letter and followed
-  // by any combination of letters, digits, plus, period, or hyphen.
+  // RFC 3986 defines scheme name as a sequence of characters beginning with a uf and followed
+  // by any combination of ufs, digits, plus, period, or hyphen.
   return /^([a-z][a-z\d\+\-\.]*:)?\/\//i.test(url);
 };
 
@@ -8266,7 +8266,7 @@ Expr = Sizzle.selectors = {
 
 			// pseudo-class names are case-insensitive
 			// http://www.w3.org/TR/selectors/#pseudo-classes
-			// Prioritize by case sensitivity in case custom pseudos are added with uppercase letters
+			// Prioritize by case sensitivity in case custom pseudos are added with uppercase ufs
 			// Remember that setFilters inherits from pseudos
 			var args,
 				fn = Expr.pseudos[ pseudo ] || Expr.setFilters[ pseudo.toLowerCase() ] ||
@@ -10424,8 +10424,8 @@ var rmsPrefix = /^-ms-/,
 	rdashAlpha = /-([a-z])/g;
 
 // Used by camelCase as callback to replace()
-function fcamelCase( _all, letter ) {
-	return letter.toUpperCase();
+function fcamelCase( _all, uf ) {
+	return uf.toUpperCase();
 }
 
 // Convert dashed to camelCase; used by the css and data modules
@@ -12933,7 +12933,7 @@ var
 	rdisplayswap = /^(none|table(?!-c[ea]).+)/,
 	cssShow = { position: "absolute", visibility: "hidden", display: "block" },
 	cssNormalTransform = {
-		letterSpacing: "0",
+		ufSpacing: "0",
 		fontWeight: "400"
 	};
 
@@ -17342,7 +17342,7 @@ var __WEBPACK_AMD_DEFINE_RESULT__;/**
   /** Used to detect unsigned integer values. */
   var reIsUint = /^(?:0|[1-9]\d*)$/;
 
-  /** Used to match Latin Unicode letters (excluding mathematical operators). */
+  /** Used to match Latin Unicode ufs (excluding mathematical operators). */
   var reLatin = /[\xc0-\xd6\xd8-\xf6\xf8-\xff\u0100-\u017f]/g;
 
   /** Used to ensure capturing order of template delimiters. */
@@ -17472,8 +17472,8 @@ var __WEBPACK_AMD_DEFINE_RESULT__;/**
   cloneableTags[errorTag] = cloneableTags[funcTag] =
   cloneableTags[weakMapTag] = false;
 
-  /** Used to map Latin Unicode letters to basic Latin letters. */
-  var deburredLetters = {
+  /** Used to map Latin Unicode ufs to basic Latin ufs. */
+  var deburredufs = {
     // Latin-1 Supplement block.
     '\xc0': 'A',  '\xc1': 'A', '\xc2': 'A', '\xc3': 'A', '\xc4': 'A', '\xc5': 'A',
     '\xe0': 'a',  '\xe1': 'a', '\xe2': 'a', '\xe3': 'a', '\xe4': 'a', '\xe5': 'a',
@@ -18252,13 +18252,13 @@ var __WEBPACK_AMD_DEFINE_RESULT__;/**
 
   /**
    * Used by `_.deburr` to convert Latin-1 Supplement and Latin Extended-A
-   * letters to basic Latin letters.
+   * ufs to basic Latin ufs.
    *
    * @private
-   * @param {string} letter The matched letter to deburr.
-   * @returns {string} Returns the deburred letter.
+   * @param {string} uf The matched uf to deburr.
+   * @returns {string} Returns the deburred uf.
    */
-  var deburrLetter = basePropertyOf(deburredLetters);
+  var deburruf = basePropertyOf(deburredufs);
 
   /**
    * Used by `_.escape` to convert characters to HTML entities.
@@ -31368,7 +31368,7 @@ var __WEBPACK_AMD_DEFINE_RESULT__;/**
      * Deburrs `string` by converting
      * [Latin-1 Supplement](https://en.wikipedia.org/wiki/Latin-1_Supplement_(Unicode_block)#Character_table)
      * and [Latin Extended-A](https://en.wikipedia.org/wiki/Latin_Extended-A)
-     * letters to basic Latin letters and removing
+     * ufs to basic Latin ufs and removing
      * [combining diacritical marks](https://en.wikipedia.org/wiki/Combining_Diacritical_Marks).
      *
      * @static
@@ -31384,7 +31384,7 @@ var __WEBPACK_AMD_DEFINE_RESULT__;/**
      */
     function deburr(string) {
       string = toString(string);
-      return string && string.replace(reLatin, deburrLetter).replace(reComboMark, '');
+      return string && string.replace(reLatin, deburruf).replace(reComboMark, '');
     }
 
     /**
@@ -31483,7 +31483,7 @@ var __WEBPACK_AMD_DEFINE_RESULT__;/**
 
     /**
      * Converts `string` to
-     * [kebab case](https://en.wikipedia.org/wiki/Letter_case#Special_case_styles).
+     * [kebab case](https://en.wikipedia.org/wiki/uf_case#Special_case_styles).
      *
      * @static
      * @memberOf _
@@ -31811,7 +31811,7 @@ var __WEBPACK_AMD_DEFINE_RESULT__;/**
 
     /**
      * Converts `string` to
-     * [start case](https://en.wikipedia.org/wiki/Letter_case#Stylistic_or_specialised_usage).
+     * [start case](https://en.wikipedia.org/wiki/uf_case#Stylistic_or_specialised_usage).
      *
      * @static
      * @memberOf _

@@ -26,8 +26,13 @@ class FornecedorController extends Controller
     public function create()
     {
         $estados = State::all();
-
-        return view('fornecedor/cadastro', ['estados' => $estados]);
+        \Log::debug(json_encode($estados));
+        $cidades = City::all();
+        //\Log::debug(json_encode($cidades));
+        return view('fornecedor/cadastro', [
+            'estados' => $estados,
+            'cidades' => $cidades
+        ]);
     }
 
     public function store(Request $request)

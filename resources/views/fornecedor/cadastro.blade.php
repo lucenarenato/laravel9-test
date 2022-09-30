@@ -255,15 +255,19 @@
                                 <option value>Selecione</option>
                                 @foreach ($estados as $estado)
                                     <option class="estados" data-id='{{ $estado->id }}'
-                                        value="{{ $estado->abreviacao }}">{{ $estado->nome }}</option>
+                                        value="{{ $estado->uf }}">{{ $estado->uf }}</option>
                                 @endforeach
                             </select>
                         </div>
                         <div class="mb-3 col-md-3">
                             <label for="cidade" class="form-label">Cidade <span>*</span></label>
-                            <select class="form-select" required disabled name="cidade" id="cidade"
+                            <select class="form-select" required name="cidade" id="cidade"
                                 aria-label="Default select example">
                                 <option value>Selecione</option>
+                                @foreach ($cidades as $cidade)
+                                    <option class="cidades" data-id='{{ $cidade->id }}'
+                                        value="{{ $cidade->title }}">{{ $cidade->title }}</option>
+                                @endforeach
                             </select>
                         </div>
                         <div class="mb-3 col-md-3">
@@ -299,8 +303,8 @@
             </div>
 
             <div class="botao_submit text-center">
-                <button type="submit" class="btn cadastrar">
-                    <i class="fas fa-upload"></i> Start upload
+                <button type="submit" class="btn btn-success cadastrar">
+                    <i class="fa fa-plus fa-fw"></i> Cadastrar
                 </button>
             </div>
 
@@ -497,6 +501,7 @@
                     dataType: 'jsonp',
                 }).done(function(results, sucess) {
                     console.log(results);
+                    console.log(results['municipio']);
                     $(this).val(results['cnpj']);
                     $("#razao_social").val(results['nome']);
                     $("#nome_fantasia").val(results['fantasia']);
@@ -506,7 +511,7 @@
                     $("#complemento").val(results['complemento']);
                     $("#bairro").val(results['bairro']);
                     $("#uf").val(results['uf']).click();
-                    $("#cidade").val(results['municipio']).attr('selected', true);
+                    $("#cidade").val(results['municipio']); //.attr('selected', true);
                 });
             });
             $('#cep').blur(function(e) {
@@ -523,7 +528,7 @@
                     $("#complemento").val(results['complemento']);
                     $("#bairro").val(results['bairro']);
                     $("#uf").val(results['uf']).click();
-                    $("#cidade").val(results['municipio']).attr('selected', true);
+                    $("#cidade").val(results['municipio']); //.attr('selected', true);
                 });
             });
             $('#uf').click(function(e) {
@@ -534,15 +539,16 @@
                         method: 'GET',
                         dataType: 'json',
                     }).done(function(results, sucess) {
-                        // console.log(results);
+                        console.log('cidade');
+                        console.log(results);
                         $('#cidade').empty();
                         var content = '';
                         content += '<option value>Selecione</option>';
                         if (results) {
                             $('#cidade').removeAttr('disabled');
                             $.each(results, function(k, v) {
-                                content += '<option value="' + v['nome'] + '">' + v[
-                                    'nome'] + '</option>';
+                                content += '<option value="' + v['title'] + '">' + v[
+                                    'title'] + '</option>';
                             });
                             $('#cidade').append(content);
                         }
@@ -575,7 +581,7 @@
             //     var telefone2 = telefone2.replace('-', '');
             //     console.log(telefone2);
             // });
-            
+
         });
     </script>
 @stop

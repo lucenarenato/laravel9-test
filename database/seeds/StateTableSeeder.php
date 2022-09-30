@@ -17,7 +17,7 @@ class StateTableSeeder extends Seeder
             array (
                 'id' => '1',
                 'title' => 'Acre',
-                'letter' => 'AC',
+                'uf' => 'AC',
                 'iso' => '12',
                 'slug' => 'acre',
                 'population' => '816687',
@@ -26,7 +26,7 @@ class StateTableSeeder extends Seeder
             array (
                 'id' => '2',
                 'title' => 'Alagoas',
-                'letter' => 'AL',
+                'uf' => 'AL',
                 'iso' => '27',
                 'slug' => 'alagoas',
                 'population' => '3358963',
@@ -35,7 +35,7 @@ class StateTableSeeder extends Seeder
             array (
                 'id' => '3',
                 'title' => 'Amazonas',
-                'letter' => 'AM',
+                'uf' => 'AM',
                 'iso' => '13',
                 'slug' => 'amazonas',
                 'population' => '4001667',
@@ -44,7 +44,7 @@ class StateTableSeeder extends Seeder
             array (
                 'id' => '4',
                 'title' => 'Amapá',
-                'letter' => 'AP',
+                'uf' => 'AP',
                 'iso' => '16',
                 'slug' => 'amapa',
                 'population' => '782295',
@@ -53,7 +53,7 @@ class StateTableSeeder extends Seeder
             array (
                 'id' => '5',
                 'title' => 'Bahia',
-                'letter' => 'BA',
+                'uf' => 'BA',
                 'iso' => '29',
                 'slug' => 'bahia',
                 'population' => '15276566',
@@ -62,7 +62,7 @@ class StateTableSeeder extends Seeder
             array (
                 'id' => '6',
                 'title' => 'Ceará',
-                'letter' => 'CE',
+                'uf' => 'CE',
                 'iso' => '23',
                 'slug' => 'ceara',
                 'population' => '8963663',
@@ -71,7 +71,7 @@ class StateTableSeeder extends Seeder
             array (
                 'id' => '7',
                 'title' => 'Distrito Federal',
-                'letter' => 'DF',
+                'uf' => 'DF',
                 'iso' => '53',
                 'slug' => 'distrito-federal',
                 'population' => '2977216',
@@ -80,7 +80,7 @@ class StateTableSeeder extends Seeder
             array (
                 'id' => '8',
                 'title' => 'Espírito Santo',
-                'letter' => 'ES',
+                'uf' => 'ES',
                 'iso' => '32',
                 'slug' => 'espirito-santo',
                 'population' => '3973697',
@@ -89,7 +89,7 @@ class StateTableSeeder extends Seeder
             array (
                 'id' => '9',
                 'title' => 'Goiás',
-                'letter' => 'GO',
+                'uf' => 'GO',
                 'iso' => '52',
                 'slug' => 'goias',
                 'population' => '6695855',
@@ -98,7 +98,7 @@ class StateTableSeeder extends Seeder
             array (
                 'id' => '10',
                 'title' => 'Maranhão',
-                'letter' => 'MA',
+                'uf' => 'MA',
                 'iso' => '21',
                 'slug' => 'maranhao',
                 'population' => '6954036',
@@ -107,7 +107,7 @@ class StateTableSeeder extends Seeder
             array (
                 'id' => '11',
                 'title' => 'Minas Gerais',
-                'letter' => 'MG',
+                'uf' => 'MG',
                 'iso' => '31',
                 'slug' => 'minas-gerais',
                 'population' => '20997560',
@@ -116,7 +116,7 @@ class StateTableSeeder extends Seeder
             array (
                 'id' => '12',
                 'title' => 'Mato Grosso do Sul',
-                'letter' => 'MS',
+                'uf' => 'MS',
                 'iso' => '50',
                 'slug' => 'mato-grosso-do-sul',
                 'population' => '2682386',
@@ -125,7 +125,7 @@ class StateTableSeeder extends Seeder
             array (
                 'id' => '13',
                 'title' => 'Mato Grosso',
-                'letter' => 'MT',
+                'uf' => 'MT',
                 'iso' => '51',
                 'slug' => 'mato-grosso',
                 'population' => '3305531',
@@ -134,7 +134,7 @@ class StateTableSeeder extends Seeder
             array (
                 'id' => '14',
                 'title' => 'Pará',
-                'letter' => 'PA',
+                'uf' => 'PA',
                 'iso' => '15',
                 'slug' => 'para',
                 'population' => '8272724',
@@ -143,7 +143,7 @@ class StateTableSeeder extends Seeder
             array (
                 'id' => '15',
                 'title' => 'Paraiba',
-                'letter' => 'PB',
+                'uf' => 'PB',
                 'iso' => '25',
                 'slug' => 'paraiba',
                 'population' => '3999415',
@@ -152,7 +152,7 @@ class StateTableSeeder extends Seeder
             array (
                 'id' => '16',
                 'title' => 'Pernambuco',
-                'letter' => 'PE',
+                'uf' => 'PE',
                 'iso' => '26',
                 'slug' => 'pernambuco',
                 'population' => '9410336',
@@ -161,7 +161,7 @@ class StateTableSeeder extends Seeder
             array (
                 'id' => '17',
                 'title' => 'Piauí',
-                'letter' => 'PI',
+                'uf' => 'PI',
                 'iso' => '22',
                 'slug' => 'piaui',
                 'population' => '3212180',
@@ -170,7 +170,7 @@ class StateTableSeeder extends Seeder
             array (
                 'id' => '18',
                 'title' => 'Paraná',
-                'letter' => 'PR',
+                'uf' => 'PR',
                 'iso' => '41',
                 'slug' => 'parana',
                 'population' => '11242720',
@@ -179,7 +179,7 @@ class StateTableSeeder extends Seeder
             array (
                 'id' => '19',
                 'title' => 'Rio de Janeiro',
-                'letter' => 'RJ',
+                'uf' => 'RJ',
                 'iso' => '33',
                 'slug' => 'rio-de-janeiro',
                 'population' => '16635996',
@@ -188,7 +188,7 @@ class StateTableSeeder extends Seeder
             array (
                 'id' => '20',
                 'title' => 'Rio Grande do Norte',
-                'letter' => 'RN',
+                'uf' => 'RN',
                 'iso' => '24',
                 'slug' => 'rio-grande-do-norte',
                 'population' => '3474998',
@@ -197,7 +197,7 @@ class StateTableSeeder extends Seeder
             array (
                 'id' => '21',
                 'title' => 'Rondônia',
-                'letter' => 'RO',
+                'uf' => 'RO',
                 'iso' => '11',
                 'slug' => 'rondonia',
                 'population' => '1787279',
@@ -206,7 +206,7 @@ class StateTableSeeder extends Seeder
             array (
                 'id' => '22',
                 'title' => 'Roraima',
-                'letter' => 'RR',
+                'uf' => 'RR',
                 'iso' => '14',
                 'slug' => 'roraima',
                 'population' => '514229',
@@ -215,7 +215,7 @@ class StateTableSeeder extends Seeder
             array (
                 'id' => '23',
                 'title' => 'Rio Grande do Sul',
-                'letter' => 'RS',
+                'uf' => 'RS',
                 'iso' => '43',
                 'slug' => 'rio-grande-do-sul',
                 'population' => '11286500',
@@ -224,7 +224,7 @@ class StateTableSeeder extends Seeder
             array (
                 'id' => '24',
                 'title' => 'Santa Catarina',
-                'letter' => 'SC',
+                'uf' => 'SC',
                 'iso' => '42',
                 'slug' => 'santa-catarina',
                 'population' => '6910553',
@@ -233,7 +233,7 @@ class StateTableSeeder extends Seeder
             array (
                 'id' => '25',
                 'title' => 'Sergipe',
-                'letter' => 'SE',
+                'uf' => 'SE',
                 'iso' => '28',
                 'slug' => 'sergipe',
                 'population' => '2265779',
@@ -242,7 +242,7 @@ class StateTableSeeder extends Seeder
             array (
                 'id' => '26',
                 'title' => 'São Paulo',
-                'letter' => 'SP',
+                'uf' => 'SP',
                 'iso' => '35',
                 'slug' => 'sao-paulo',
                 'population' => '44749699',
@@ -251,7 +251,7 @@ class StateTableSeeder extends Seeder
             array (
                 'id' => '27',
                 'title' => 'Tocantins',
-                'letter' => 'TO',
+                'uf' => 'TO',
                 'iso' => '17',
                 'slug' => 'tocantins',
                 'population' => '1532902',

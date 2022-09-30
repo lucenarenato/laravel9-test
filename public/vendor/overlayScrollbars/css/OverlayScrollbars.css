@@ -240,7 +240,7 @@ body.os-dragging * {
     text-align: inherit;
     text-shadow: inherit;
     text-overflow: inherit;
-    letter-spacing: inherit;
+    uf-spacing: inherit;
     word-spacing: inherit;
     line-height: inherit;
     unicode-bidi: inherit;

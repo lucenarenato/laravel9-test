@@ -11,7 +11,8 @@ class CitiesController extends Controller
 {
     public function show($nome_estado)
     {
-        $estado = State::where('letter', $nome_estado)->get('id');
+        $estado = State::where('uf', $nome_estado)->get('id');
+        \Log::debug(json_encode($estado));
         $cidades = City::where('state_id', $estado[0]->id)->get();
         return response()->json($cidades);
     }

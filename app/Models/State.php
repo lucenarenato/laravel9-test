@@ -10,7 +10,7 @@ class State extends Model
 
     protected $fillable = [
         'title',
-        'letter' // abreviação
+        'uf' // abreviação
     ];
 
     public function cities()
